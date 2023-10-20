@@ -19,11 +19,9 @@ We will be exploring DNS in this tutorial. Please make sure you have followed al
 
 Make sure that you are logged into both DC-1 and CLIENT under your admin account (mine being mydomain.com\john_admin).
 
-![image](https://i.imgur.com/aFzME2F.png)
+![image](https://i.imgur.com/Q6PPZL7.png)
 
 Under CLIENT go into command prompt and type `ping mainframe` and you will notice it cannot be found. The CLIENT will first attempt to check its own cache for the domain name, then its host file, and finally the DNS attached to the Network Interface Card. Once it has cycled through these options with nothing to retrieve, it returns a basic failure because no IP address is found to ping. We get the same result even with `nslookup mainframe`.
-
-![Image](https://i.imgur.com/Q6PPZL7.png)
 
 We will switch back to DC-1 in order to create an A-Record so that it can be discovered by our computers.
 
