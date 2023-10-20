@@ -32,3 +32,21 @@ In **Server Manager**'s **Dashboard**, click on **Tools**, then select **DNS**. 
 ![Image](https://i.imgur.com/rXd2qaH.png)
 
 With this new record cataloged, we will return to the CLIENT and ping the mainframe once more, and you will now have a connection.
+
+---
+
+## DNS Cache
+
+![Image](https://i.imgur.com/iSKeMDf.png)
+
+Now that we have some data in our DNS cache we can now manipulate and observe the DNS cache. Return to DC-1 and change mainframe's record address to 8.8.8.8 (Google) and refresh the DNS by right-clicking DC-1 and clicking Refresh
+
+![Image](https://i.imgur.com/D59LazB.png)
+
+On the CLIENT, we will ping the mainframe again. You will notice that it has not changed to 8.8.8.8, but instead, it still has the IP of DC-1. The reason for this is that the old DNS configuration is logged in the DNS cache. But no worries, we have a fix.
+
+![Image](https://i.imgur.com/ZVFXnwy.png)
+
+![Image](https://i.imgur.com/tmm6Nff.png)
+
+Run `ipconfig /displaydns`, and you will once again see that the old IP is logged for the mainframe. To update the DNS, run `ipconfig /flushdns` (if asked for required elevation, ensure you are running Command Prompt as an administrator), and then ping the mainframe once more. With the cache having been cleared using the flush command, the computer can now be in tune with the up-to-date resources.
