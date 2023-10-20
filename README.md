@@ -63,6 +63,14 @@ To end this tutorial we will touch on CNAME records (we will effecitley map name
 
 To conclude this tutorial, we will cover CNAME records, effectively mapping names to other names. Return to DC-1 and follow the same steps as we did for A-Records, with one exception: instead of creating a **New Host (A or AAAA record)**, we will create a **New Alias (CNAME)**. Enter "search" as the **Alias name** and "www.google.com" as the Fully Qualified Domain Name (FQDN). Now, return to CLIENT and repeat the ping and nslookup process to observe our success. This is the same process as before, where you couldn't ping "search" without the creation of a CNAME, but now you can after its creation.
 
+---
+The resolution of at least some connectivity issues being dumbed down to the simple flushing of a DNS cache amuses me, but it is also an invaluable tool for troubleshooting that I'm glad we've learned. Next, we shall explore [file permissions](https://github.com/NicholasToon/Understanding-File-Permissions-in-Azure). Thank you for your time.
+
+
+
+
+
+
 
 
 
