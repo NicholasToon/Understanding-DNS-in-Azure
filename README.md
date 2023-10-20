@@ -15,4 +15,10 @@ We will be exploring DNS in this tutorial. Please make sure you have followed al
 - Windows Server 2022
 - Windows 10 Pro (22H2)
 
-## DNS Configuration Steps
+## A-Records
+
+Make sure that you are logged into both DC-1 and CLIENT under your admin account (mine being mydomain.com\john_admin).
+
+![image](https://i.imgur.com/aFzME2F.png)
+
+Under CLIENT go into command prompt and type `ping mainfraime` and you will notice it cannot be found. The CLIENT will first attempt to check its own cache for the domain name, then its host file, and finally the DNS attached to the Network Interface Card. Once it has cycled through these options with nothing to retrieve, it returns a basic failure because no IP address is found to ping. We get the same result even with `nslookup mainframe`.
