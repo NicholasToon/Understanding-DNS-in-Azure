@@ -47,6 +47,6 @@ On the CLIENT, we will ping the mainframe again. You will notice that it has not
 
 ![Image](https://i.imgur.com/ZVFXnwy.png)
 
-![Image](https://i.imgur.com/tmm6Nff.png)
+![Image](https://i.imgur.com/xUWb7TI.png)
 
 Run `ipconfig /displaydns`, and you will once again see that the old IP is logged for the mainframe. To update the DNS, run `ipconfig /flushdns` (if asked for required elevation, ensure you are running Command Prompt as an administrator), and then ping the mainframe once more. With the cache having been cleared using the flush command, the computer can now be in tune with the up-to-date resources.
