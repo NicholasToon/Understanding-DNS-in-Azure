@@ -3,6 +3,8 @@
 # Understanding DNS
 We will be exploring DNS in this tutorial. Please make sure you have followed along thus far with the previous labs in order to proceed. The tutorial will cover A-Records on the server, the creation and deletion of records, as well as briefly touching on CNAME records.
 
+*Always delete your resource groups and other environments in Azure to avoid incurring any unwanted charges on your free credits or actual money. Keep resources open at your own discretion.*
+
 ## Environments and Technologies Used
 
 - Microsoft Azure (Virtual Machines/Compute)
